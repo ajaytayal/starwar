@@ -1,0 +1,15 @@
+*{
+	font:normal 15px "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	padding:0;
+	margin:0;
+}
+h1{font-size:30px; font-weight:600; text-align:center; border-bottom:1px solid #ccc; padding:20px;}
+h2{font-size:25px; font-weight:500; padding:10px;}
+ul.searchList{width:500px; margin:10px;}
+ul.searchList li{font-size:15px;padding:10px;border:1px solid #ccc;border-collapse:collapse}
+ul.searchList li.showBig{font-size:20px;}
+form input{padding:5px; border:1px solid #000; width:200px; background:#fff; margin:10px;}
+form input[type="submit"]{background:#000AD0; color:#fff;}
+ul.links{font-size:15px;}
+ul.links li{padding:10px;}
+.error{padding:0 10px; font-size:12px; color:#f00}
