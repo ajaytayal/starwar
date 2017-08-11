@@ -2,13 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom"
 import {connect} from "react-redux";
 
+import { withRouter } from 'react-router'
+
+function mapStateToProps(state) {
+  return {};
+}
+
+function mapDispatchToProps() {
+    return {};
+}
+
 @connect((store) => {
   return {
     users: store.userReducer.users,
   }
 })
  
-export default class Login extends React.Component{
+class Login extends React.Component{
 	
 	constructor(props) {
     	super(props);
@@ -32,7 +42,7 @@ export default class Login extends React.Component{
 		for(var i=0; i<users.length; i++){
 			var user = users[i];
 			if(user.name == this.state.username && user.birth_year == this.state.pass){
-				location.href = ('/search');
+				this.props.history.push('/search')
 				break;
 			}else{
 				this.setState({error:'Either Username or Password is incorrect'})
@@ -52,3 +62,5 @@ export default class Login extends React.Component{
     )
   }
 }
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
