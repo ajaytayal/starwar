@@ -25,7 +25,7 @@ export default class Main extends React.Component{
   render(){
     return (
       <div>
-      <div>Starwar</div>
+      <div>Starwar page</div>
 	  	<LoginForm users = {this.props.users} />
       </div>
     )
